@@ -1,8 +1,8 @@
-var React = require('react');
-var PropTypes = require('prop-types');
-var api = require('../utils/api');
+import React from 'react'
+import PropTypes from 'prop-types'
+import fetchPopularRepos from '../utils/api'
 
-function SelectLanguage (props) {
+const SelectLanguage = (props)=> {
     var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
     return (
         <ul className='languages'>
@@ -20,7 +20,7 @@ function SelectLanguage (props) {
     )
 }
 
-function RepoGrid(props) {
+const RepoGrid = (props)=> {
     return (
         <ul className = 'popular-list'>
             {props.repos.map((repo,index)=>{
@@ -77,7 +77,7 @@ class Popular extends React.Component {
                 repos:null
                 }
         });
-        api.fetchPopularRepos(lang)
+        fetchPopularRepos(lang)
             .then((repos)=>{
                 this.setState(()=>{return {repos}});
             });
@@ -103,4 +103,4 @@ class Popular extends React.Component {
     }
 }
 
-module.exports = Popular;
+export default Popular

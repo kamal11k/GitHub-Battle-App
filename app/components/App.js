@@ -1,7 +1,9 @@
-var React = require('react');
-var Popular = require('./Popular')
+import React from 'react'
+import Popular from './Popular'
 
-class App extends React.Component {
+import BasicExample from './test'
+
+export default class App extends React.Component {
     render(){
         return(
             <div className='container'>
@@ -11,4 +13,3 @@ class App extends React.Component {
     }
 }
 
-module.exports = App;

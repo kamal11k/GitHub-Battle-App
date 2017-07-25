@@ -8,6 +8,7 @@ import Nav from './Nav'
 import Home from './Home'
 import Battle from './Battle'
 import Popular from './Popular'
+import Result from './Result'
 
 import BasicExample from './test'
 
@@ -21,6 +22,7 @@ class App extends React.Component {
                     <Switch>
                         <Route exact path='/' component={Home} />
                         <Route exact path='/Battle' component={Battle} />
+                        <Route exact path='/Battle/results' component={Result} />
                         <Route path='/Popular' component={Popular} />
                         <Route render= {()=>{
                             return <p>Not Found</p>

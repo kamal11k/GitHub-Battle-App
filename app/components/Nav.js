@@ -1,7 +1,7 @@
 import React from 'react'
-import NavLink from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
-export const Nav = ()=> (
+const Nav = ()=> (
     <ul className='nav'>
         <li>
             <NavLink to='/'>Home</NavLink>
@@ -14,3 +14,5 @@ export const Nav = ()=> (
         </li>
     </ul>
 )
+
+export default Nav

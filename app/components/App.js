@@ -9,19 +9,19 @@ import Home from './Home'
 import Battle from './Battle'
 import Popular from './Popular'
 
-
 import BasicExample from './test'
 
-export default class App extends React.Component {
+
+class App extends React.Component {
     render(){
         return(
             <Router>
                 <div className='container'>
                     <Nav />
                     <Switch>
-                        <Route path='/' component={Home} />
+                        <Route exact path='/' component={Home} />
+                        <Route exact path='/Battle' component={Battle} />
                         <Route path='/Popular' component={Popular} />
-                        <Route path='/Battle' component={Battle} />
                         <Route render= {()=>{
                             return <p>Not Found</p>
                         }} />
@@ -31,4 +31,7 @@ export default class App extends React.Component {
         )
     }
 }
+
+export default App
+
 

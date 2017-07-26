@@ -22,7 +22,32 @@ li {
 
 .button {
   color: #e6e6e6;
+  background: #9e0f0f;
+  border: none;
+  font-size: 16px;
+  border-radius: 3px;
+  width: 200px;
+  text-align: center;
+  display: block;
+  padding: 7px 0;
+  margin: 10px auto;
+}
+
+.resetButton {
+  color: #e6e6e6;
   background: #0a0a0a;
+  border: none;
+  font-size: 16px;
+  border-radius: 3px;
+  width: 200px;
+  text-align: center;
+  display: block;
+  padding: 7px 0;
+  margin: 10px auto;
+}
+.submitButton {
+  color: #e6e6e6;
+  background: green;
   border: none;
   font-size: 16px;
   border-radius: 3px;

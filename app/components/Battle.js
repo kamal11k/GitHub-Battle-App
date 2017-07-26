@@ -36,7 +36,7 @@ class PlayerInput extends React.Component {
                     autoComplete='off'
                     onChange={this.handleChange}
                 />
-                <button className='button' type='submit' disabled={!this.state.user_name}>
+                <button className='submitButton' type='submit' disabled={!this.state.user_name}>
                     Submit
                 </button>
             </form>
@@ -101,7 +101,7 @@ class Battle  extends React.Component {
                             avatar = {playerOneImage}
                             user_name={playerOneName}>
                                 <button
-                                    className='button'
+                                    className='resetButton'
                                     onClick={this.handleReset.bind(null,'playerOne')}>
                                     Reset
                                 </button>
@@ -119,7 +119,7 @@ class Battle  extends React.Component {
                             avatar = {playerTwoImage}
                             user_name={playerTwoName}>
                                 <button
-                                    className='button'
+                                    className='resetButton'
                                     onClick={this.handleReset.bind(null,'playerTwo')}>
                                     Reset
                                 </button>

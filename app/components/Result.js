@@ -3,11 +3,35 @@ import queryString from 'query-string'
 import {battle} from '../utils/api'
 import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
+import PlayerPreview from './PlayerPreview'
+
+const Profile = (props)=> {
+    console.log(props.info.login)
+    var info = props.info;
+    return(
+        <PlayerPreview user_name={info.login} avatar={info.avatar_url}>
+            <ul className='space-list-items'>
+                {info.name && <li>{info.name}</li>}
+                {info.location && <li>{info.location}</li>}
+                {info.company && <li>{info.company}</li>}
+                <li>Followers: {info.followers}</li>
+                <li>Following: {info.following}</li>
+                <li>Public Repos: {info.public_repos}</li>
+                {info.blog && <li><a href={info.blog}>{info.blog}</a></li>}
+            </ul>
+        </PlayerPreview>
+    )
+}
+
+Profile.propTypes = {
+  info: PropTypes.object.isRequired
+}
 
 const Player = (props)=> (
     <div>
        <h1 className='header'>{props.label}</h1>
        <h3 style={{textAlign: 'center'}}>Score : {props.score}</h3>
+       <Profile info={props.profile}/>
     </div>
 )
 

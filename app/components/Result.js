@@ -2,7 +2,14 @@ import React from 'react'
 import queryString from 'query-string'
 import {battle} from '../utils/api'
 import {Link} from 'react-router-dom'
+import PropTypes from 'prop-types'
 
+const Player = (props)=> (
+    <div>
+       <h1 className='header'>{props.label}</h1>
+       <h3 style={{textAlign: 'center'}}>Score : {props.score}</h3>
+    </div>
+)
 
 class Result extends React.Component {
     constructor(props){
@@ -58,7 +65,16 @@ class Result extends React.Component {
 
         return (
             <div className='row'>
-                Results
+                <Player
+                    label = 'Winner'
+                    score = {winner.score}
+                    profile = {winner.profile}
+                />
+                <Player
+                    label = 'Loser'
+                    score = {loser.score}
+                    profile = {loser.profile}
+                />
             </div>
         )
     }

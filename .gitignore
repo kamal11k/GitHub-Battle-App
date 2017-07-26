@@ -2,3 +2,4 @@ node_modules
 dist
 app/components/test.js
 test2.js
+firebase.json

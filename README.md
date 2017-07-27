@@ -14,4 +14,9 @@ system.After cloning the only thing you have to do is -
 
 ## You can see my final project [here](https://my-react-github-battle-p-d6a2e.firebaseapp.com/)
 
+You have to input two user names and will see like this - 
+
+
+![image](https://user-images.githubusercontent.com/23717861/28655972-cdb5b748-72bc-11e7-9572-1ca1e974ca4a.jpg)
+
 

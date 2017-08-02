@@ -28,9 +28,8 @@ li {
   border-radius: 3px;
   width: 200px;
   text-align: center;
-  display: block;
-  padding: 7px 0;
-  margin: 10px auto;
+  padding: 7px 30px;
+  margin: 20px 550px;
 }
 
 .resetButton {
